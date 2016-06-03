@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      StatusBar.overlaysWebView(false);
+    </script>
+    <div data-role="page" data-theme="b">
+      <div data-role="header" data-position="fixed">
+
+      </div>
+      <div data-role="content">
+        <a href="#mapa"  data-role="button" data-transition="slide">Ver mi ubicación</a>
+        <a href="" onclick="geo();" data-role="button" data-rel="dialog">Ver mis coordenadas</a>
+        <div id="geolocation"></div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <h4>Footer</h4>
+      </div>
+  </div>
+
+  <div data-role="page" data-theme="b" id="mapa">
+    <div data-role="header" data-position="fixed" >
+      <h1>Header</h1>
+    </div>
+    <div data-role="content">
+      <a href="#" data-role="button" data-icon="home"  data-iconpos="center" onclick="initMap();">Ubicar</a>
+        <div id="map" style="width: 100%; height: 400px;"></div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+       <a href="" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext" data-transition="slideleft"></a>
+    </div>
+  </div>
+
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmq-bKd6CSpzjMuno94zqOyeUGnHlH0SA"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+  </body>
+</html>
